@@ -1,0 +1,25 @@
+platform:
+  accel: "gpu"
+
+  #model_type: "protein_mpnn"
+  #proteinmpnn_weights: "/scratch/zs251/ThermoMPNN/vanilla_model_weights/v_48_002.pt"
+  #model_path: "/scratch/zs251/ThermoMPNN/vanilla_model_weights/thermoMPNN_default.pt"
+  #proteinmpnn_weights: "/scratch/zs251/ThermoMPNN/vanilla_model_weights/proteinmpnn_v_48_002.pt"
+  #model_path: "/scratch/zs251/ThermoMPNN/vanilla_model_weights/ThermoProteinMPNN_epoch_97_val_ddG_spearman_0.76.pt"
+
+  model_type: "ligand_mpnn"
+  proteinmpnn_weights: "/scratch/zs251/ThermoMPNN/vanilla_model_weights/ligandmpnn_v_32_005_25.pt"
+  model_path: "/scratch/zs251/ThermoMPNN/vanilla_model_weights/ThermoLigandMPNN_epoch_90_val_ddG_spearman_0.76.pt"
+
+data_loc:
+        megascale_csv: "/scratch/zs251/ThermoMPNN/data/mega_scale/Processed_K50_dG_datasets/Tsuboyama2023_Dataset2_Dataset3_20230416.csv"
+        megascale_splits: "/scratch/zs251/ThermoMPNN/data/mega_scale/mega_splits.pkl"
+        megascale_pdbs: "/scratch/zs251/ThermoMPNN/data/mega_scale/AlphaFold_model_PDBs"
+
+        fireprot_csv: "/scratch/zs251/ThermoMPNN/data/fireprot/4_fireprotDB_bestpH.csv"
+        fireprot_splits: "/scratch/zs251/ThermoMPNN/data/fireprot/fireprot_splits.pkl"
+        fireprot_pdbs: "/scratch/zs251/ThermoMPNN/data/fireprot/pdbs"
+
+        mdrdb_tsv: "/scratch/zs251/ThermoMPNN/data/MdrDB_CoreSet_v1.0.2022/Single_Substitution/MdrDB_CoreSet_single_substitution.tsv"
+        mdrdb_splits: "/scratch/zs251/ThermoMPNN/data/MdrDB_CoreSet_v1.0.2022/Single_Substitution/MdrDB_CoreSet_single_substitution.pkl"
+        mdrdb_pdbs: "/scratch/zs251/ThermoMPNN/data/MdrDB_CoreSet_v1.0.2022"
